@@ -1,6 +1,5 @@
 from flask import Flask, Response, json, jsonify, request, url_for
 from PIL import Image
-import cv2
 import datetime
 import PIL.ImageOps
 from SHARP import SHARP
