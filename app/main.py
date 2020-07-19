@@ -24,12 +24,12 @@ def not_found(error=None):
 
 @app.route('/')
 def welcome():
-    return ('Welcome')
+    return "<h1>Welcome to Geeks for Geeks</h1>"
 
 
 @app.route('/CenturyLink', methods=['POST'])
 def welcomeCTL():
-    return ('CenturyLink')
+    return '<h2>CenturyLink</h2>'
 
 
 @app.route('/response')
