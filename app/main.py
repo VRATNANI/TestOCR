@@ -2,7 +2,7 @@ from flask import Flask, Response, json, jsonify, request, url_for
 from PIL import Image
 import datetime
 import PIL.ImageOps
-from app.SHARP import SHARP
+from SHARP import SHARP
 
 
 
@@ -23,7 +23,7 @@ def not_found(error=None):
 
 @app.route('/')
 def welcome():
-    return "<h1>Welcome to Geeks for Geeks</h1>"
+    return "<h1>Welcome</h1>"
 
 
 @app.route('/CenturyLink', methods=['POST'])

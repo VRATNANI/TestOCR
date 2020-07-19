@@ -46,7 +46,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV='D:\Test\NIKHILTEST'
+VIRTUAL_ENV='D:\HerokuOCR\Clone\TestOCR'
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
