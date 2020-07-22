@@ -2,6 +2,8 @@ from flask import Flask, Response, json, jsonify, request, url_for
 from PIL import Image
 import datetime
 import PIL.ImageOps
+from io import BytesIO
+import base64
 from SHARP import SHARP
 
 
@@ -42,7 +44,8 @@ def data(MachineName):
         #data = request.get_json()
         #image = request.files()
         file = request.files['image']
-        img = Image.open(file.stream)
+        img = Image.open(BytesIO(base64.b64decode(file.stream))
+        #img = Image.open(file.stream)
         img.save('intermediate.png', quality=100)
         weight = str(SHARP("intermediate.png"))
         message = {
